@@ -52,7 +52,10 @@ class _Slice9ImageSliderState extends State<Slice9ImageSlider> {
     return GestureDetector(
       child: Stack(
         children: [
-          Image(image: widget.background),
+          Image(
+            image: widget.background,
+            height: widget.height,
+          ),
           ValueListenableBuilder(
             valueListenable: _sliderValue,
             builder: (BuildContext context, SliderValue value, Widget? child) {
@@ -71,12 +74,16 @@ class _Slice9ImageSliderState extends State<Slice9ImageSlider> {
           ),
           if (null != widget.builder)
             Positioned.fill(
-                child: widget.builderAnimateOpacityEnabled?  ValueListenableBuilder(
-              valueListenable: _childOpacityValue,
-              builder: (BuildContext context, double value, Widget? child) {
-                return Opacity(opacity: value, child: widget.builder!(context));
-              },
-            ):widget.builder!(context))
+                child: widget.builderAnimateOpacityEnabled
+                    ? ValueListenableBuilder(
+                        valueListenable: _childOpacityValue,
+                        builder: (BuildContext context, double value,
+                            Widget? child) {
+                          return Opacity(
+                              opacity: value, child: widget.builder!(context));
+                        },
+                      )
+                    : widget.builder!(context))
         ],
       ),
       onTap: () {
@@ -107,7 +114,8 @@ class _Slice9ImageSliderState extends State<Slice9ImageSlider> {
         _sliderValue.value = _sliderValue.value
             .copyWith(opacity: 0 == _sliderValue.value.progress ? 0 : 1);
         widget.onProgressChanged(_sliderValue.value.progress);
-        if (widget.builderAnimateOpacityEnabled && 0 == _sliderValue.value.progress) {
+        if (widget.builderAnimateOpacityEnabled &&
+            0 == _sliderValue.value.progress) {
           _childOpacityValue.value = _minChildOpacity;
         }
       },
