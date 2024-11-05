@@ -25,7 +25,7 @@ class StepProgressSlider extends StatefulWidget {
       this.height,
       this.decoration,
       required this.totalSteps,
-       this.initialStep =0,
+      this.initialStep = 0,
       this.margin,
       this.innerPadding,
       this.stepBuidler,
@@ -97,7 +97,7 @@ class _StepProgressSliderDartState extends State<StepProgressSlider> {
                   totalSteps: widget.totalSteps,
                   currentStep: value,
                   stepBuidler: null != widget.stepBuidler
-                      ? (int step) => widget.stepBuidler!(step, step<=value)
+                      ? (int step) => widget.stepBuidler!(step, step <= value)
                       : null)),
           if (null != cursor)
             Positioned(
@@ -106,7 +106,8 @@ class _StepProgressSliderDartState extends State<StepProgressSlider> {
                     value * stepSpace,
                 child: GestureDetector(
                   child: cursor,
-                  onHorizontalDragStart: (details) => widget.onStepStart?.call(value),
+                  onHorizontalDragStart: (details) =>
+                      widget.onStepStart?.call(value),
                   onHorizontalDragUpdate: (details) {
                     Offset globalPos = details.globalPosition;
                     int step = (globalPos.dx - cursorWidth / 2 - stepSpace) ~/
@@ -128,13 +129,15 @@ class _StepProgressSliderDartState extends State<StepProgressSlider> {
       },
     );
   }
+
   @override
   void didUpdateWidget(covariant StepProgressSlider oldWidget) {
-    if (widget.initialStep!=oldWidget.initialStep){
+    if (widget.initialStep != oldWidget.initialStep) {
       _currentStepValue.value = widget.initialStep;
     }
     super.didUpdateWidget(oldWidget);
   }
+
   @override
   void dispose() {
     _currentStepValue.dispose();
