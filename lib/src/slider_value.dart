@@ -1,5 +1,8 @@
 class SliderValue {
+  /// The progress of slider
   final double progress;
+
+  /// The opacity of slider
   final double opacity;
 
   SliderValue({required this.progress, required this.opacity});

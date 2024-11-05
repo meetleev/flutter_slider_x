@@ -6,13 +6,28 @@ import 'package:flutter/services.dart';
 import 'slider_value.dart';
 
 class Slice9ImageSlider extends StatefulWidget {
+  /// The background image of slider
   final ImageProvider background;
+
+  /// The bar image of slider, must nine-patch image.
   final ImageProvider bar;
+
+  /// The center slice for a nine-patch image.
   final Rect barCenterSlice;
+
+  /// The total progress ight of slider
   final double max;
+
+  /// The min progress ight of slider
   final double? min;
+
+  /// The height of slider
   final double height;
+
+  /// The progress  of slider
   final double value;
+
+  /// The progress value change callback of slider
   final ValueChanged<double> onProgressChanged;
   final Widget Function(BuildContext context)? builder;
   final bool builderAnimateOpacityEnabled;

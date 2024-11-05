@@ -4,19 +4,47 @@ import 'package:flutter/services.dart';
 import 'step_progress_indicator.dart';
 
 class StepProgressSlider extends StatefulWidget {
+  /// The direction to use as the main axis.
   final Axis direction;
+
+  /// The width of slider.
+
   final double? width;
+
+  /// The height of slider.
+
   final double? height;
+
+  /// The decoration to paint behind the [child].
   final BoxDecoration? decoration;
+
+  /// The total steps of slider.
   final int totalSteps;
+
+  /// The initial step of slider.
   final int initialStep;
   final EdgeInsets? margin;
+
+  /// The inner padding of slider.
   final EdgeInsets? innerPadding;
+
+  /// The step buidler of slider.
   final Widget Function(int step, bool selected)? stepBuidler;
+
+  /// The cursor buidler of slider.
   final PreferredSizeWidget Function(int step)? cursorBuidler;
   final Size? stepIndicatorSize;
+
+  /// The step start event of slider.
+
   final ValueChanged<int>? onStepStart;
+
+  /// The step update event of slider.
+
   final ValueChanged<int>? onStepUpdate;
+
+  /// The step ended event of slider.
+
   final ValueChanged<int>? onStepEnded;
   const StepProgressSlider(
       {super.key,
