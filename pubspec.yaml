@@ -5,8 +5,8 @@ homepage: https://github.com/meetleev
 repository: https://github.com/meetleev/flutter_slider_x
 topics:
   - slider
-  - range_selection
-  
+  - rangeselection
+
 environment:
   sdk: ">=2.18.0 <4.0.0"
   flutter: ">=3.3.0"
