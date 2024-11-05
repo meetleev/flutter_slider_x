@@ -1,8 +1,12 @@
 name: slider_x
-description: "A new Flutter package project."
+description: "A customizable Flutter slider with a draggable handle and segmented color indicators for intuitive range selection."
 version: 0.0.1
-homepage:
-
+homepage: https://github.com/meetleev
+repository: https://github.com/meetleev/flutter_slider_x
+topics:
+  - slider
+  - range_selection
+  
 environment:
   sdk: ">=2.18.0 <4.0.0"
   flutter: ">=3.3.0"

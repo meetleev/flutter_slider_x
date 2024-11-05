@@ -1,39 +1,24 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# slider_x
+[![Pub](https://img.shields.io/pub/v/slider_x.svg?style=flat-square)](https://pub.dev/packages/slider_x)
+[![support](https://img.shields.io/badge/platform-android%20|%20ios%20|%20web%20|%20macos%20|%20windows%20|%20linux%20-blue.svg)](https://pub.dev/packages/slider_x)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+A custom horizontal slider widget for Flutter, featuring a rounded draggable handle with segmented color indicators. This slider allows for smooth selection within a predefined range, with visual feedback displayed as a segmented line pattern. Ideal for applications that need intuitive range adjustments with clear, segmented visuals.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Preview
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+![](https://github.com/meetleev/static_resources/blob/main/slider_x/example.gif)
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add the package to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  slider_x: <latest_version>
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+[example](./example/lib/timer/timer_sheet.dart)
